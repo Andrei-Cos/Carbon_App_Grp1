@@ -1,0 +1,134 @@
+<!-- Colors 
+Home, section 1 (header, background): #698269
+Home, section 1 (header, boxes): #B99B6B
+Home, section 2 (developers, background): #F1DBBF 
+Home, section 2 (developers, boxes): #AA5656 
+*/ -->
+
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Header -->
+<section class="section_header_methodology">
+    <div class="container">
+  
+      <div class="header">
+        <div class="box"> 
+          <h1 style= "font-size:55px;"><span class=text-logo> Methodology</span></h1>
+          <p style="text-align:left;">
+              The methodology for the Carbon App is based on real data on carbon emission. The students has been critical and search for sicens based data. The development of the formulas are made by the students and are explained. We hope that this Carbon app will help people to be more aware of their carbon emission on a daily basis, and hopefully reduce it.
+          </p>
+          <div class="container_buttons_links_header">
+            <div class="btn">
+                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#aa5656;">Paper</a>
+            </div>
+            <div class="btn">
+                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#aa5656;">Carbon App</a>
+            </div>
+          </div>  
+        </div>
+        <div class="box">
+          <img 
+            src="{{url_for('static', filename='icons/methodology_photo.png')}}"
+            width="325" 
+            height="337"
+            alt=""/>
+        </div>
+      </div>
+      
+    </div>
+</section> 
+
+<!-- Transports -->
+<section class="section_transports">
+    <div class="container">
+   
+      <div class="transports" style="display:block;">
+        <br>
+        <h1 style="text-align:center;"> Our methodology</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut? Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat ullam, pariatur iure unde ratione ipsum adipisci repellendus, repudiandae hic sit, temporibus molestias corrupti aut soluta sequi! Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis placeat neque porro, animi incidunt consectetur. Maiores ab saepe tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga quasi nesciunt dolor iste, inventore necessitatibus unde!
+        </p>      
+      </div>
+   
+      <div class="transports" style="text-align: left;">
+          <div class="container">
+            <div class="box">
+   
+              <h3>Cars</h3>
+              <p>
+                Gasoline:
+                <br>According to SSB.no, an avarage gasoline driven car emits <br>157,47g CO\(_2\) per km.
+                <br><br>\[{0,157kg \times km} \over Passengers \]
+                
+                Diesel:
+                <br>According to SSB.no, an avarage diesel driven car emits <br>130,09g CO\(_2\) per km.
+                <br><br>\[{0,130kg \times km} \over Passengers \]
+                Electric:
+                <br>According to SSB.no, an avarage electrical driven car consumes 
+                <br>0,2 kWh per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[{0,2 kWh \times km \times 0,388 kg CO_2} \over Passengers \]
+              </p>
+            </div>
+            <div class="box">
+              <h3>Busses</h3>
+              <p>
+                Diesel:
+                <br>According to SSB.no, an avarage diesel driven bus emits <br>855,4g CO\(_2\) per km.
+                <br><br>\[{0,855kg \times km} \over Passengers \]
+                Electric:
+                <br>According to Sustainable-bus.com, an avarage electrical driven bus consumes 
+                1,745 kWh per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[{1,745 kWh \times km \times 0,388 kg CO_2} \over Passengers \]
+              
+            </div>           
+            <div class="box">
+              <h3>Trains</h3>
+              <p>
+                For trains we used the circumference of the earth multiplied by the root of infinity:
+                <br> \[{2 \pi r^2} * \sqrt{\infty} \delta\]
+              </p>
+            </div>    
+          </div> 
+   
+   
+   
+          <div class="container" style="margin: 0;">
+            <div class="box2">
+              <h3>Bicycle</h3>
+              <p>
+                A grown man that weighs 80kg and is 180cm tall, bicycling in the city
+                <br>will use energy worth of 0,037 kWh. (here we could convert to juuls and tell how much he would need to eat??)
+                <br><br>
+                eBike:
+                <br>According to tredz.co.uk, an electrical bike with maximum capacity of 400 Wh will be last for 80km
+                on an open road, with good road surfaces and a steady pace. \({400 Wh \over 80km} = 5 Wh = 0,005 kWh \)
+                per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[0,005 kWh \times km \times 0,388 kg CO_2\]
+   
+   
+              </p>
+            </div>
+            <div class="box2">
+              <h3>Airplain</h3>
+              <p>
+                For airplains we used:
+                <br>\[T_{earth} = \sqrt{2 \pi^2 R^3 \over Gm_{sum}}\]
+              </p>
+            </div>           
+            <div class="box2">
+            <h3>Walk</h3>
+   
+            <p>
+              A grown man that weighs 80kg and is 180cm tall, walking in a pace of 4 km/h
+              will use energy worth of 0,065 kWh. (here we could convert to juuls and tell how much he would need to eat??)
+   
+            </p>
+          </div>     
+      </div>
+    </div>
+   
+    </div>          
+  </section>
+   
+  {% endblock content %}
