@@ -46,10 +46,7 @@ ul {
     text-decoration: none;
 }
 
-.navbar a:hover {
-    border-bottom: 3px solid; 
-    border-bottom-color: #507464;
-}
+
 
 .navbar ul {
     display: flex;
