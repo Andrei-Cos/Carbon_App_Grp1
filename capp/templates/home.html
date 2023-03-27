@@ -73,126 +73,265 @@
   <br>
   <div class="container">
     <div class="developers" style="display:block;">
-     <h1 style="text-align:center; color: #40574D;"> Developers</h1>
+     <h1 style="text-align:center; color: #000;"> Developers</h1>
     <p>
-      Our team of economists and developers ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut? Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat ullam, pariatur iure unde ratione ipsum adipisci repellendus, repudiandae hic sit, temporibus molestias corrupti aut soluta sequi! Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis placeat neque porro, animi incidunt consectetur. Maiores ab saepe tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga quasi nesciunt dolor iste, inventore necessitatibus unde!
+      Our team of students of economics has this semester taken the class of Green Digitalization and App Development. The teacher Mario Blázquez de Paz has been teaching the students to develop and deploy their own app in groups. 
+The programming languages the students have learned is HTML, CSS, Flask, Python and Chart.js. The students have learn how to deploy the app with GitHub, Heroku and Amazon web Service. 
+
+If you have any questions about the app or the developers, you are welcome to ask questions to the group or contact the members on their LinkedIn profiles. 
+
     </p>
   </div>
 
   <br>
 
-  <div class="developers">
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Oda.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-      <h3>Developer 1</h3>
-      <p>  Oda Kalve Strand, 30 years, from Larvik (Norway). She has a bachelor in nursing and is now studing economics and administration. This semester she is takeing the subject of green digitalisation and app development to try to learn some new skills witch can be helpfull for future stuides and work. 
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="https://no.linkedin.com/in/oda-kalve-strand-40470a216"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-      </div> 
+  <div class="developers" style="align-items: center;">
+    <ol>
+    <div class="container_developers">
+        <div class="box">
+        <img src="/static/Pictures/Oda.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+        <h3> Oda </h3>
+        <button onclick="myFunction()" 
+        style="
+        background-color: #FF7F00;
+        border: 2px solid  #FF7F00;   
+        padding: 10px 10px;
+        margin: 10px 10px 10px 10px;
+        color: #FFF;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;"> 
+        Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+        <p id="demo"></p>
+        <script>function myFunction() {
+          document.getElementById("demo").innerHTML = "Oda Kalve Strand, 30 years, from Larvik (Norway). She has a bachelor in nursing and is now takeing a Bachelor in Buisness and Administration. This semester she is exicted to take the subject of green digitalisation and app development to try to learn some new skills witch can be helpfull for future stuides and work. ";}</script>
+        
+        <div class="container_buttons_developers">
+          <a class="btn_developers" href="https://no.linkedin.com/in/oda-kalve-strand-40470a216"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+        </div> 
+        </div>
+
+        <div class="box">
+          <img src="/static/Pictures/Alex.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Alexander </h3>
+          <button onclick="myFunction_1()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_1"></p>
+          <script>function myFunction_1() {
+            document.getElementById("demo_1").innerHTML = "Alexander Strøno is a 23-year-old from Oslo who is currently pursuing a Bachelor's degree in Business and Administration at the Western University of Applied Science. Prior to commencing his degree, he possessed experience in coding logical scripts using Python and VBA. The purpose of enrolling in this course was to acquire comprehensive skills and knowledge that would equip him with the ability to further enhance his aptitude on his own. ";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div>
+
+        <div class="box">
+          <img src="/static/Pictures/Andrei.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Andrei </h3>
+          <button onclick="myFunction_3()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_2"></p>
+          <script>function myFunction_3() {
+            document.getElementById("demo_2").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div>   
+
+        <div class="box">
+          <img src="/static/Pictures/Andy.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Andy </h3>
+          <button onclick="myFunction_4()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_3"></p>
+          <script>function myFunction_4() {
+            document.getElementById("demo_3").innerHTML = "Andy Etsiako Ntiamoah, 24 years old from Bergen (Norway). He is currently studying a Bachelor’s degree in Business and Administration at Western Norway University of Applied Sciences on his second year. Previously Andy has taken an IT class in high school and wanted to broaden his knowledge and developing skills. His goal for this class is to acquired new skills and gain an advantage in coding for the future.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div>   
+
+        <div class="box">
+          <img src="/static/Pictures/Augus.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Augus </h3>
+          <button onclick="myFunction_5()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_4"></p>
+          <script>function myFunction_5() {
+            document.getElementById("demo_4").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div> 
     </div>
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Andy.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px; height: 200px;">
-      <h3>Developer 2</h3>
-      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-      </div> 
-    </div>           
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Augus.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-      <h3>Developer 3</h3>
-      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="#"  target="_blank">LinkedIn</a>
-      </div> 
-    </div>  
-    <div class="developers">
-      <div class="box2">
-        <img src="{{url_for('static', filename='Pictures/Mona.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-        <h3>Developer 4</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
-      </div>
-      <div class="box2">
-        <img src="{{url_for('static', filename='Pictures/Line.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-        <h3>Developer 5</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
-      </div>           
-      <div class="box3">
+    <div class="container_developers">
+        <div class="box3">
+          <img src="/static/Pictures/Haeun.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Haeun </h3>
+          <button onclick="myFunction_6()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
 
-      </div>     
-  </div>
+          <p id="demo_5"></p>
+          <script>function myFunction_6() {
+            document.getElementById("demo_5").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div> 
 
-  
+        <div class="box3">
+          <img src="/static/Pictures/Line.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Line </h3>
+          <button onclick="myFunction_7()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_6"></p>
+          <script>function myFunction_7() {
+            document.getElementById("demo_6").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div> 
+
+        <div class="box3">
+          <img src="/static/Pictures/Mona.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Mona </h3>
+          <button onclick="myFunction_8()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_7"></p>
+          <script>function myFunction_8() {
+            document.getElementById("demo_7").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div> 
+
+        <div class="box3">
+          <img src="/static/Pictures/Signy.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Signy </h3>
+          <button onclick="myFunction_9()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_8"></p>
+          <script>function myFunction_9() {
+            document.getElementById("demo_8").innerHTML = "Signy Rut Astvaldsdottir, 24 years from Iceland and Norway. She has a nursing degree from before and is currently studying economics. She has no experience from before, but is excited to learn some basic knowledge in Python, javascript, Github and AWS this semester.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div> 
+        <div class="box3">
+          <img src="/static/Pictures/Tonje.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
+          <h3> Tonje </h3>
+          <button onclick="myFunction_10()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+
+          <p id="demo_9"></p>
+          <script>function myFunction_10() {
+            document.getElementById("demo_9").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+          
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+        </div>      
+    </div>
+    </ol>
 </div>
-  </div>
-</section>
-
-<section class="section_developers">
-  <div class="container">
-  <div class="developers">
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Signy.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-      <h3>Developer 6</h3>
-      <p>  Oda Kalve Strand, 30 years, from Larvik (Norway). She has a bachelor in nursing and is now studing economics and administration. This semester she is takeing the subject of green digitalisation and app development to try to learn some new skills witch can be helpfull for future stuides and work. 
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="https://no.linkedin.com/in/oda-kalve-strand-40470a216"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-      </div> 
-    </div>
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Haeun.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-      <h3>Developer 7</h3>
-      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-      </div> 
-    </div>           
-    <div class="box">
-      <img src="{{url_for('static', filename='Pictures/Tonje.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-      <h3>Developer 8</h3>
-      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-      </p>
-      <div class="container_buttons_developers">
-        <a class="btn_developers" href="#"  target="_blank">LinkedIn</a>
-      </div> 
-    </div>  
-    <div class="developers">
-      <div class="box2">
-        <img src="{{url_for('static', filename='Pictures/Andrei.jpg')}}" style="border-radius: 50%; width:200px; height: 200px;">
-        <h3>Developer 9</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
-      </div>
-      <div class="box2">
-        <img src="{{url_for('static', filename='Pictures/Alex.jpg')}}" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-        <h3>Developer 10</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
-      </div>           
-      <div class="box3">
-
-      </div>     
-  </div>
-
-  
+</div>     
+  </div>  
 </div>
   </div>
 </section>
