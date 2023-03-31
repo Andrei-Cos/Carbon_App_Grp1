@@ -9,13 +9,15 @@ users=Blueprint('users',__name__)
 @users.route('/register', methods=['GET','POST'])
 def register():
   form = RegistrationForm()
+  if current_user.is_authenticated:
+        return redirect(url_for('home.home_home'))
   if form.validate_on_submit():
       user_hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
       user = User(username=form.username.data, email=form.email.data, password=user_hashed_password)
       db.session.add(user)
       db.session.commit()
       flash('Your account has been created! Now, you are able to login!', 'success')
-      return redirect(url_for('home.home_home'))
+      return redirect(url_for('users.login'))
   return render_template('users/register.html', title='register', form=form)
 
 @users.route('/login', methods=['GET','POST'])
