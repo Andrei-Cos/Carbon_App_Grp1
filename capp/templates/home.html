@@ -9,9 +9,20 @@
 
     <div class="header_home">
       <div class="box"> 
-        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                      {% for category, message in messages %}
+                          <div class="alert alert-{{ category }}">
+                              {{ message }}
+                          </div> 
+                      {% endfor %}
+                  {% endif %}
+              {% endwith %}
+        <h1 style="font-size:55px;"><span class="text-logo"> Welcome to the Carbon App!</span></h1>
         <p style="text-align:left;">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+          We developed this app to help you reduce your carbon footprint by providing you with an easy way to calculate your carbon emissions. Our app is user-friendly, and it gives you an overview of your carbon footprint based on the data you input. By using our app, you can gain a better understanding of what affects your carbon footprint and what you can do to reduce it!
+          We hope that our app can help you make the right choices to reduce your carbon footprint and contribute to combating climate change. 
+          Thank you for using our app!
         </p>
         {% if current_user.is_authenticated %}
         {%else%}
@@ -118,6 +129,7 @@ If you have any questions about the app or the developers, you are welcome to as
           <img src="/static/Pictures/Alex.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
           <h3> Alexander </h3>
           <button onclick="myFunction_1()" 
+          id="btn_1"
           style="
           background-color: #FF7F00;
           border: 2px solid  #FF7F00;   
@@ -128,20 +140,34 @@ If you have any questions about the app or the developers, you are welcome to as
           text-decoration: none;
           font-size: 18px;"> 
           Read more <i class="fa-solid fa-caret-down"></i> </button>
-
-          <p id="demo_1"></p>
-          <script>function myFunction_1() {
-            document.getElementById("demo_1").innerHTML = "Alexander Strøno is a 23-year-old from Oslo who is currently pursuing a Bachelor's degree in Business and Administration at the Western University of Applied Science. Prior to commencing his degree, he possessed experience in coding logical scripts using Python and VBA. The purpose of enrolling in this course was to acquire comprehensive skills and knowledge that would equip him with the ability to further enhance his aptitude on his own. ";}</script>
+        
+          <p id="demo_1" style="display:none;">
+            Alexander Strøno is a 23-year-old from Oslo who is currently pursuing a Bachelor's degree in Business and Administration at the Western University of Applied Science. Prior to commencing his degree, he possessed experience in coding logical scripts using Python and VBA. The purpose of enrolling in this course was to acquire comprehensive skills and knowledge that would equip him with the ability to further enhance his aptitude on his own.
+          </p>
+          <script>
+            function myFunction_1() {
+              var x = document.getElementById("demo_1");
+              var btn = document.getElementById("btn_1");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+                btn.innerHTML = "Read less <i class='fa-solid fa-caret-up'></i>";
+              } else {
+                x.style.display = "none";
+                btn.innerHTML = "Read more <i class='fa-solid fa-caret-down'></i>";
+              }
+            }
+          </script>
           
           <div class="container_buttons_developers">
             <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
           </div> 
         </div>
+        
 
         <div class="box">
           <img src="/static/Pictures/Andrei.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
           <h3> Andrei </h3>
-          <button onclick="myFunction_3()" 
+          <button id="readMoreBtn" onclick="toggleReadMore()" 
           style="
           background-color: #FF7F00;
           border: 2px solid  #FF7F00;   
@@ -152,15 +178,28 @@ If you have any questions about the app or the developers, you are welcome to as
           text-decoration: none;
           font-size: 18px;"> 
           Read more <i class="fa-solid fa-caret-down"></i> </button>
-
-          <p id="demo_2"></p>
-          <script>function myFunction_3() {
-            document.getElementById("demo_2").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.";}</script>
+      
+          <p id="demo_2" style="display:none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.</p>
           
+          <script>
+            function toggleReadMore() {
+              var readMoreBtn = document.getElementById("readMoreBtn");
+              var demo_2 = document.getElementById("demo_2");
+              if (demo_2.style.display === "none") {
+                demo_2.style.display = "block";
+                readMoreBtn.innerHTML = "Read less <i class='fa-solid fa-caret-up'></i>";
+              } else {
+                demo_2.style.display = "none";
+                readMoreBtn.innerHTML = "Read more <i class='fa-solid fa-caret-down'></i>";
+              }
+            }
+          </script>
+                
           <div class="container_buttons_developers">
-            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+            <a class="btn_developers" href="#" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
           </div> 
-        </div>   
+      </div>
+      
 
         <div class="box">
           <img src="/static/Pictures/Andy.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
