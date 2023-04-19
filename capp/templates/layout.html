@@ -48,6 +48,7 @@
                   <span class="text-logo" style="font-size: 50px;"><i class="fa-solid fa-leaf" style="color: #FF7F00;"></i> CarbonApp</span>
               </a>
               </h1>
+              {% if current_user.is_authenticated %}
               <nav>
                 <ul>
                     <li>
@@ -59,8 +60,34 @@
                     <li>
                         <a href="{{url_for('carbon_app.carbon_app_home')}}"> <i class="fa-solid fa-calculator"></i> Carbon App</a>
                     </li>
+                    <li>
+                      <a href="{{url_for('users.logout')}}"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Logout</a>
+                  </li>
+                    
                 </ul>
               </nav> 
+              {%else%}
+              <nav>
+                <ul>
+                    <li>
+                        <a href="{{url_for('home.home_home')}}"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('methodology.methodology_home')}}"> <i class="fa-solid fa-info"></i> Methodology</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}"> <i class="fa-solid fa-calculator"></i> Carbon App</a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('users.register')}}"> <i class="fa-regular fa-address-card"></i> Register</a>
+                  </li>
+                    <li>
+                      <a href="{{url_for('users.login')}}"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                    </li>
+                </ul>
+              </nav>
+              {%endif%}
+              
             </div>
           </div>
           <br>
