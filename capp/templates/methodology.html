@@ -1,10 +1,3 @@
-<!-- Colors 
-Home, section 1 (header, background): #698269
-Home, section 1 (header, boxes): #B99B6B
-Home, section 2 (developers, background): #F1DBBF 
-Home, section 2 (developers, boxes): #AA5656 
-*/ -->
-
 {% extends "layout.html" %}
 {% block content %}
 
@@ -22,17 +15,12 @@ Home, section 2 (developers, boxes): #AA5656
           </p>
             <button class="btn">
                 <a href="https://docs.google.com/document/d/1LB7sJ2ddfoHPvye0LtYxO5xrmzEQeNHj2j6Ac6Gt_8c/edit?fbclid=IwAR3QH5EGtb0Qicoog0iJNQiYWfmuadTB3eiiieQOIfvOQS1CTFyBkUBR96I" class="button" target="_blank">Paper</a>
-            
-            
                 <a href="{{url_for('carbon_app.carbon_app_home')}}" class="button">Carbon App</a>
             </button>
         </div>
         <div class="box">
           <img 
-            src="{{url_for('static', filename='icons/methodology_photo.png')}}"
-            width="325" 
-            height="337"
-            alt=""/>
+            src="{{url_for('static', filename='icons/methodology_photo.png')}}"/>
         </div>
       </div>
       
@@ -43,7 +31,7 @@ Home, section 2 (developers, boxes): #AA5656
 <section class="section_transports">
     <div class="container">
    
-      <div class="transports" style="display:block;">
+      <div class="transports">
         <br>
         <div class="box">
           <h1 style="text-align:center;"> Our methodology</h1>
@@ -58,7 +46,7 @@ Home, section 2 (developers, boxes): #AA5656
         </div>
       </div>
    
-      <div class="transports" style="text-align: left;">
+      <div class="transports">
           <div class="container">
             <div class="box">
    
