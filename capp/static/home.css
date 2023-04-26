@@ -70,26 +70,17 @@ p {
   transition: 0.5s;
 }
 
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 
 /* Section events */
 .section_events {
   align-items: start;
   background: #F6F4E8;
 }
-.container_events{
+.section_events .container{
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
-  display: flex;
 }
 
 .box4 {
@@ -100,8 +91,8 @@ p {
   padding: 15px 20px;
   text-align:center;
   margin: 20px 30px;
+  margin-bottom: auto;
 }
-
 
 /* Section developers */
 .section_developers {
@@ -109,7 +100,7 @@ background-color:#F6F4E8;
 }
 .developers {
 display: flex;  
-align-items: start;
+align-items: center;
 background: #F6F4E8;
 justify-content: center;
 }
@@ -162,41 +153,21 @@ flex-grow:4;
 flex-grow:4;
 }
 
-.container_buttons_developers {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap:wrap;
-padding: 0px 0px;
-margin: 0px 0px;
-}
+
+
 .btn_developers {
-padding: 10px 10px;
-margin: 10px 10px 10px 10px;
-color: #fff;
-border-radius: 5px;
-text-decoration: none;
-font-size: 18px;
-background-color: #FF7F00;
-border: 2px solid  #FF7F00;
+  background-color: #FF7F00;
+  border: 2px solid  #FF7F00;   
+  padding: 10px 10px;
+  margin: 10px 10px 10px 10px;
+  color: #FFF;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+
 }
-.btn_developers:hover {
-color: #fff;
-background-color: #F6F4E8;
-border: 2px solid #F1DBBF;
-text-decoration: none;
-}
-.developers .box2 {
-flex: 1;
-background: #BACEC1;
-color: #fff;
-border-radius: 10px;
-margin: 20px 10px;
-padding: 15px 20px;
-text-align:center;
-align-items: center;
-justify-content: center;
-}
+
+
 .developers .box2:nth-of-type(1) {
 flex-grow:4;
 }
@@ -205,8 +176,14 @@ flex-grow:4;
 }
 .developers .box2:nth-of-type(3) {
 flex-grow:4;
-background: #c5c8d9;
 }
+.developers .box2:nth-of-type(4) {
+  flex-grow:4;
+}
+.developers .box2:nth-of-type(5) {
+  flex-grow:4;
+}
+ 
 @media (max-width:768px) { 
   .header_home {
     flex-direction: column;
@@ -226,9 +203,7 @@ background: #c5c8d9;
     flex-direction: column;
     justify-content: center;
   }
-  .box4{
-    justify-content: center;
-  }
+
   .container_buttons_developers {
     display: flex;
     flex-direction: column;
