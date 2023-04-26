@@ -127,15 +127,42 @@
 
         <div class="box">
           <img src="/static/Pictures/Andrei.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
-          <h3> Andrei </h3>
-          <button id="toggle-button-3" class="btn_developers" onclick="togglePersonInfo3()">Read more <i class="fa-solid fa-caret-down"></i> </button>
-          <div id="person-info-3" style="display: none;">
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat explicabo aliquid laboriosam suscipit praesentium aliquam officia non, blanditiis nisi numquam libero quae laborum! Aut non qui nulla doloribus esse.</p>
-          </div>
-          <br><br>
-            <a class="btn_developers" href="#"  target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-            <br><br>
-          </div>   
+          <h3> Andrei </h3>  
+
+          <button id="readMoreBtn" onclick="toggleReadMore()" 
+          style="
+          background-color: #FF7F00;
+          border: 2px solid  #FF7F00;   
+          padding: 10px 10px;
+          margin: 10px 10px 10px 10px;
+          color: #FFF;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 18px;"> 
+          Read more <i class="fa-solid fa-caret-down"></i> </button>
+      
+          <p id="demo_2" style="display:none;">Andrei, 24 years old e-business student from Belgium. He came to Norway for a semester in order to learn more about sustanabilty. He is comfortable in Python, Javascript and C++ and has already developped a couple of apps prior to taking this course. He enrolled for this course to learn new ways of developping modern application.</p>
+          
+          <script>
+            function toggleReadMore() {
+              var readMoreBtn = document.getElementById("readMoreBtn");
+              var demo_2 = document.getElementById("demo_2");
+              if (demo_2.style.display === "none") {
+                demo_2.style.display = "block";
+                readMoreBtn.innerHTML = "Read less <i class='fa-solid fa-caret-up'></i>";
+              } else {
+                demo_2.style.display = "none";
+                readMoreBtn.innerHTML = "Read more <i class='fa-solid fa-caret-down'></i>";
+              }
+            }
+          </script>
+                
+          <div class="container_buttons_developers">
+            <a class="btn_developers" href="https://www.linkedin.com/in/andrei-mihai-cosmin/" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+          </div> 
+      </div>
+      
+
 
         <div class="box">
           <img src="/static/Pictures/Andy.jpg" alt="" style="border-radius: 50%; width:200px; height: 200px;">
