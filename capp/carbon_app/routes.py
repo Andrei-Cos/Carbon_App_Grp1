@@ -151,7 +151,7 @@ def new_entry_ElBicycle():
     if form.validate_on_submit():
         kms = form.kms.data
         fuel = form.fuel_type.data
-        transport = 'ElBicycle'
+        transport = 'ElBicyle'
         # kms = request.form['kms']
         # fuel = request.form['fuel_type']
 
