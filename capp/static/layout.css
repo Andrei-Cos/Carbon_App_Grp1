@@ -33,7 +33,6 @@ ul {
 .navbar {
     display: flex;
     justify-content: flex-start;
-    height: 70px;
     align-items: center;
     background-color: #F6F4E8;
     padding: 0px;
@@ -45,8 +44,6 @@ ul {
     font-size: 20px;
     text-decoration: none;
 }
-
-
 
 .navbar ul {
     display: flex;
@@ -73,7 +70,6 @@ ul {
 /* Media Query */
 @media(max-width:768px){
     .navbar {
-        height: 160px;
         flex-direction: column;
     }
     .navbar ul {
