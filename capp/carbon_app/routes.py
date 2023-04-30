@@ -4,6 +4,7 @@ from capp import db
 from datetime import timedelta, datetime
 from flask_login import login_required, current_user
 from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, TrainForm, ElkickScooterForm, ElBicycleForm
+import json
 
 carbon_app=Blueprint('carbon_app',__name__)
 
@@ -176,7 +177,130 @@ def your_data():
     entries = Transport.query.filter_by(author=current_user). \
         filter(Transport.date> (datetime.now() - timedelta(days=5))).\
         order_by(Transport.date.desc()).order_by(Transport.transport.asc()).all()
-    return render_template('carbon_app/your_data.html', title='your_data', entries=entries)
+    #Emissions by category
+    emissions_by_transport = db.session.query(db.func.sum(Transport.total), Transport.transport). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.transport).order_by(Transport.transport.asc()).all()
+    emission_transport = [0, 0, 0, 0, 0, 0,0]
+    first_tuple_elements = []
+    second_tuple_elements = []
+    for a_tuple in emissions_by_transport:
+        first_tuple_elements.append(a_tuple[0])
+        second_tuple_elements.append(a_tuple[1])
+
+    if 'Bus' in second_tuple_elements:
+        index_bus = second_tuple_elements.index('Bus')
+        emission_transport[1]=first_tuple_elements[index_bus]
+    else:
+        emission_transport[1]
+
+    if 'Car' in second_tuple_elements:
+        index_car = second_tuple_elements.index('Car')
+        emission_transport[2]=first_tuple_elements[index_car]
+    else:
+        emission_transport[2]
+
+    if 'Plane' in second_tuple_elements:
+        index_plane = second_tuple_elements.index('Plane')
+        emission_transport[3]=first_tuple_elements[index_plane]
+    else:
+        emission_transport[3]
+
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        emission_transport[4]=first_tuple_elements[index_train]
+    else:
+        emission_transport[4]
+
+    if 'ElkickScooter' in second_tuple_elements:
+        index_scooter= second_tuple_elements.index('ElkickScooter')
+        emission_transport[5]=first_tuple_elements[index_scooter]
+    else:
+        emission_transport[5]
+
+    if 'ElBicyle' in second_tuple_elements:
+        index_bike= second_tuple_elements.index('ElBicyle')
+        emission_transport[6]=first_tuple_elements[index_bike]
+    else:
+        emission_transport[6]
+
+    #Kilometers by category
+    kms_by_transport = db.session.query(db.func.sum(Transport.kms), Transport.transport). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.transport).order_by(Transport.transport.asc()).all()
+    kms_transport = [0, 0, 0, 0, 0, 0,0]
+    first_tuple_elements = []
+    second_tuple_elements = []
+    for a_tuple in kms_by_transport:
+        first_tuple_elements.append(a_tuple[0])
+        second_tuple_elements.append(a_tuple[1])
+
+    if 'Bus' in second_tuple_elements:
+        index_bus = second_tuple_elements.index('Bus')
+        kms_transport[0]=first_tuple_elements[index_bus]
+    else:
+        kms_transport[0] 
+
+    if 'Car' in second_tuple_elements:
+        index_car = second_tuple_elements.index('Car')
+        kms_transport[1]=first_tuple_elements[index_car]
+    else:
+        kms_transport[1]
+
+    if 'Plane' in second_tuple_elements:
+        index_plane = second_tuple_elements.index('Plane')
+        kms_transport[2]=first_tuple_elements[index_plane]
+    else:
+        kms_transport[2]
+
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        kms_transport[3]=first_tuple_elements[index_train]
+    else:
+        kms_transport[3]
+
+    if 'ElkickScooter' in second_tuple_elements:
+        index_scooter = second_tuple_elements.index('ElkickScooter')
+        kms_transport[4]=first_tuple_elements[index_scooter]
+    else:
+        kms_transport[4]
+
+    if 'ELBicyle' in second_tuple_elements:
+        index_bike = second_tuple_elements.index('ElBicyle')
+        kms_transport[5]=first_tuple_elements[index_bike]
+    else:
+        kms_transport[5]
+
+    #Emissions by date (individual)
+    emissions_by_date = db.session.query(db.func.sum(Transport.total), Transport.date). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.date).order_by(Transport.date.asc()).all()
+    over_time_emissions = []
+    dates_label = []
+    for total, date in emissions_by_date:
+        dates_label.append(date.strftime("%m-%d-%y"))
+        over_time_emissions.append(total)    
+
+    #Kms by date (individual)
+    kms_by_date = db.session.query(db.func.sum(Transport.kms), Transport.date). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.date).order_by(Transport.date.asc()).all()
+    over_time_kms = []
+    dates_label = []
+    for total, date in kms_by_date:
+        dates_label.append(date.strftime("%m-%d-%y"))
+        over_time_kms.append(total)      
+
+
+    return render_template('carbon_app/your_data.html', title='your_data', entries=entries,
+        emissions_by_transport_python_dic=emissions_by_transport,     
+        emission_transport_python_list=emission_transport,             
+        emissions_by_transport=json.dumps(emission_transport),
+        kms_by_transport=json.dumps(kms_transport),
+        over_time_emissions=json.dumps(over_time_emissions),
+        over_time_kms=json.dumps(over_time_kms),
+        dates_label=json.dumps(dates_label))
+    
 
 #Delete emission
 @carbon_app.route('/carbon_app/delete-emission/<int:entry_id>')
