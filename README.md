@@ -16,12 +16,14 @@ The Carbon App is a web application designed to calculate and track carbon footp
 
 3. Install the dependencies:
    ```shell
-   npm install
+   python -m venv venv
+   venv\Scripts\activate
+   pip install requirements.txt
    ```
 
 4. Start the application:
    ```shell
-   npm start
+   python application.py
    ```
 
 5. Open a web browser and visit `http://localhost:3000` to access the Carbon App.
