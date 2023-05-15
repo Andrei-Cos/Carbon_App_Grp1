@@ -3,6 +3,10 @@
 ## Description
 The Carbon App is a web application designed to calculate and track carbon footprints for individuals and organizations. It provides a user-friendly interface for users to input their activities and generates reports on their carbon emissions. This app aims to raise awareness about carbon footprints and encourage users to adopt more sustainable lifestyles and practices.
 
+## Website 
+The app is currently hosted on the following website :
+https://forwardedu.org/green_digitalization_course/HVL/2023/group1/home
+
 ## Installation
 1. Clone the repository:
    ```shell
@@ -25,8 +29,6 @@ The Carbon App is a web application designed to calculate and track carbon footp
    ```shell
    python application.py
    ```
-
-5. Open a web browser and visit `http://localhost:3000` to access the Carbon App.
 
 ## Features
 - User registration and authentication
