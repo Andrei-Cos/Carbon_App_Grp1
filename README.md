@@ -22,7 +22,7 @@ https://forwardedu.org/green_digitalization_course/HVL/2023/group1/home
    ```shell
    python -m venv venv
    venv\Scripts\activate
-   pip install requirements.txt
+   pip install -r requirements.txt
    ```
 
 4. Start the application:
